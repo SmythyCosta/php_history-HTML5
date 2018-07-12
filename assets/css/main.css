@@ -1,0 +1,40 @@
+/* ===== Player =====*/
+#mainPlayer {
+    background: #181c23;
+    width: 100%;
+    min-height: 55px;
+    border-top: 1px solid #0b1119;
+    border-bottom: 1px solid #0b1119;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    right: 0 !important;
+    bottom: 0 !important;
+    color: #337ab7;
+}
+
+
+/* ===== Modal load =====*/
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 0, 0, 0, .8 ) 
+                url('http://localhost/php_history-HTML5/assets/image/ajax-loader.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+/* enquanto estiver carregando, o scroll da página estará desativado */
+body.loading {
+    overflow: hidden;   
+}
+
+/* a partir do momento em que o body estiver com a classe loading,  o modal aparecerá */
+body.loading .modal {
+    display: block;
+}
